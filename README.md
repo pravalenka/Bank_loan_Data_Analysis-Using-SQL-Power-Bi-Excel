@@ -86,96 +86,114 @@ The primary objective of the Details Dashboard is to provide a comprehensive and
  USING SQL 
  ---------
 BANK LOAN REPORT QUERY DOCUMENT
-A.	BANK LOAN REPORT | SUMMARY
+A.BANK LOAN REPORT | SUMMARY
+
 KPI’s:
 
-1.Total Loan Applications
+1. Total Loan Applications
+
 SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
 
 ![Total_application](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/d9afa04c-8684-458b-87cd-a76bac694f1d)
 
-2.MTD Loan Applications
+2. MTD Loan Applications
+
 SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 
 ![MTD Loan Applications](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/391b7160-1074-4425-b35e-f8c8df5ed7f8)
 
-3.PMTD Loan Applications
+3. PMTD Loan Applications
+
 SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
 
  ![PMTD Loan Applications](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/f1618879-dc21-4f96-8d2b-5b2fcaa2964d)
 
-4.Total Funded Amount
+4. Total Funded Amount
+
 SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
 
 ![Total Funded Amount](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/51745ac3-8236-400c-8186-80de9fd213ce)
 
-5.MTD Total Funded Amount
+5. MTD Total Funded Amount
+   
 SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 
 ![MTD Total Funded Amount](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/f7bf3838-1d01-4a82-b792-8e60491ee4b0)
 
-6.PMTD Total Funded Amount
+6. PMTD Total Funded Amount
+   
 SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
 
  ![PMTD Total Funded Amount](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/befccb18-b738-440d-b2c6-5e9247fead3c)
 
-7.Total Amount Received
+7. Total Amount Received
+   
 SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
 
 ![Total Amount Received](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/302829e1-b276-42b3-a084-1036f95ea21e)
 
-8.MTD Total Amount Received
+8. MTD Total Amount Received
+   
 SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 
 ![MTD Total Amount Received](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/a0baed9c-5066-427a-9e2d-a2327089cf21)
 
-9.PMTD Total Amount Received
+9. PMTD Total Amount Received
+    
 SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
 
 ![PMTD Total Amount Received](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/7487fb91-af25-4655-95a2-87d1dde30181)
 
-10.Average Interest Rate
+10. Average Interest Rate
 SELECT AVG(int_rate)*100 AS Avg_Int_Rate FROM bank_loan_data
+
 
 ![Average Interest Rate](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/109ca276-e8c6-447f-a1a7-4e16e40e7c5d)
 
-11.MTD Average Interest
+11. MTD Average Interest
+    
 SELECT AVG(int_rate)*100 AS MTD_Avg_Int_Rate FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 
 ![MTD Average Interest](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/036f6c1e-be2c-4f9c-b8c1-d105978ab792)
 
-12.PMTD Average Interest
+12. PMTD Average Interest
+    
 SELECT AVG(int_rate)*100 AS PMTD_Avg_Int_Rate FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
 
 ![PMTD Average Interest](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/8e87e143-8902-409b-a020-b05c3a6fbfa0)
 
-13.Avg DTI
+13. Avg DTI
+    
 SELECT AVG(dti)*100 AS Avg_DTI FROM bank_loan_data
 
 ![Avg DTI](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/82750358-a37d-4c83-bd7c-516ac9d70fb7)
 
-14.MTD Avg DTI
+14. MTD Avg DTI
+    
 SELECT AVG(dti)*100 AS MTD_Avg_DTI FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 
 ![MTD Avg DTI](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/255ec0b9-a6d4-47b9-8542-cf01af5b644a)
 
-15.PMTD Avg DTI
+15. PMTD Avg DTI
+    
 SELECT AVG(dti)*100 AS PMTD_Avg_DTI FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
 
  ![PMTD Avg DTI](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/a06ed084-3616-41e6-a59b-df6ca8056f1c)
 
-16.GOOD LOAN ISSUED
-1.Good Loan Percentage
+16. GOOD LOAN ISSUED
+  
+1. Good Loan Percentage
+   
 SELECT
     (COUNT(CASE WHEN loan_status = 'Fully Paid' OR loan_status = 'Current' THEN id END) * 100.0) / 
 	COUNT(id) AS Good_Loan_Percentage
@@ -183,26 +201,31 @@ FROM bank_loan_data
 
 ![Good Loan Percentage](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/6bd2762b-01bc-4e08-b194-80ee2cacd8a6)
 
-2.Good Loan Applications
+2. Good Loan Applications
+   
 SELECT COUNT(id) AS Good_Loan_Applications FROM bank_loan_data
 WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
 
 ![Good Loan Applications](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/d987e6a4-6dda-42c7-a873-f0a07fd877cc)
 
-3.Good Loan Funded Amount
+3. Good Loan Funded Amount
+   
 SELECT SUM(loan_amount) AS Good_Loan_Funded_amount FROM bank_loan_data
 WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
 
 ![Good Loan Funded Amount](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/dfa11b49-e5dc-43ec-af67-91c5af482b6b)
 
-4.Good Loan Amount Received
+4. Good Loan Amount Received
+   
 SELECT SUM(total_payment) AS Good_Loan_amount_received FROM bank_loan_data
 WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
 
 ![Good Loan Amount Received](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/87a847f9-7400-4c62-9595-e9cbf741731a)
 
-17.BAD LOAN ISSUED
-1.Bad Loan Percentage
+17. BAD LOAN ISSUED
+
+1. Bad Loan Percentage
+
 SELECT
     (COUNT(CASE WHEN loan_status = 'Charged Off' THEN id END) * 100.0) / 
 	COUNT(id) AS Bad_Loan_Percentage
@@ -210,25 +233,29 @@ FROM bank_loan_data
 
 ![Bad Loan Percentage](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/1fcf847b-9498-476e-9430-d6ebeec7552f)
 
-2.Bad Loan Applications
+2. Bad Loan Applications
+   
 SELECT COUNT(id) AS Bad_Loan_Applications FROM bank_loan_data
 WHERE loan_status = 'Charged Off'
 
 ![Bad Loan Applications](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/3579cfa6-664e-4202-857d-28b27d109f2b)
 
-3.Bad Loan Funded Amount
+3. Bad Loan Funded Amount
+   
 SELECT SUM(loan_amount) AS Bad_Loan_Funded_amount FROM bank_loan_data
 WHERE loan_status = 'Charged Off'
 
 ![Bad Loan Funded Amount](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/6a204f84-bc7d-4f7d-a0f8-178f8c4ded8a)
 
-4.Bad Loan Amount Received
+4. Bad Loan Amount Received
+   
 SELECT SUM(total_payment) AS Bad_Loan_amount_received FROM bank_loan_data
 WHERE loan_status = 'Charged Off'
 
 ![Bad Loan Amount Received](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/66e152bd-1498-432e-94a0-e7f04088a7eb)
 
-18.LOAN STATUS
+18. LOAN STATUS
+    
 	SELECT
         loan_status,
         COUNT(id) AS LoanCount,
@@ -253,8 +280,10 @@ GROUP BY loan_status
 ![LOAN STATUS1](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/79f9b95c-c405-40ca-adad-8dba5ecc4cfc)
 
 
-B.	BANK LOAN REPORT | OVERVIEW
-1.MONTH
+B. BANK LOAN REPORT | OVERVIEW
+
+1. MONTH
+   
 SELECT 
 	MONTH(issue_date) AS Month_Munber, 
 	DATENAME(MONTH, issue_date) AS Month_name, 
@@ -267,7 +296,8 @@ ORDER BY MONTH(issue_date)
 
 ![Month](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/70037ce9-fd1a-4b7c-bacb-1b02de6482dc)
 
-2.STATE
+2. STATE
+   
 SELECT 
 	address_state AS State, 
 	COUNT(id) AS Total_Loan_Applications,
@@ -279,7 +309,8 @@ ORDER BY address_state
 
 ![STATE](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/6bbca16d-b787-453c-b826-dd46ba2c8e82)
 
-3.TERM
+3. TERM
+   
 SELECT 
 	term AS Term, 
 	COUNT(id) AS Total_Loan_Applications,
@@ -291,7 +322,8 @@ ORDER BY term
 
 ![TERM](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/7b6b79a2-38ad-418b-a092-1707e6617d7d)
 
-4.EMPLOYEE LENGTH
+4. EMPLOYEE LENGTH
+   
 SELECT 
 	emp_length AS Employee_Length, 
 	COUNT(id) AS Total_Loan_Applications,
@@ -303,7 +335,8 @@ ORDER BY emp_length
 
 ![EMPLOYEE LENGTH](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/25fb3fa5-3bfd-4b5f-91b5-aa5058f0e5a7)
 
-5.PURPOSE
+5. PURPOSE
+   
 SELECT 
 	purpose AS PURPOSE, 
 	COUNT(id) AS Total_Loan_Applications,
@@ -315,7 +348,8 @@ ORDER BY purpose
 
 ![PURPOSE](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/0496271d-bd69-453b-994e-90224e1942af)
 
-6.HOME OWNERSHIP
+6. HOME OWNERSHIP
+   
 SELECT 
 	home_ownership AS Home_Ownership, 
 	COUNT(id) AS Total_Loan_Applications,
@@ -329,7 +363,9 @@ ORDER BY home_ownership
 
 --Note: I have applied multiple Filters on all the dashboards. You can check the results for the filters as well by modifying the query and comparing the results.
 For e.g-
-7.See the results when we hit the Grade A in the filters for dashboards.
+
+7. See the results when we hit the Grade A in the filters for dashboards.
+
 SELECT 
 	purpose AS PURPOSE, 
 	COUNT(id) AS Total_Loan_Applications,
