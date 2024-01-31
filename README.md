@@ -1,7 +1,8 @@
 # Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel
 
 PROBLEM STATEMENT
---------------------------
+-------------------
+You can also download from above Problem Statement Document File
 
 DASHBOARD 1: SUMMARY
 -----------------------
