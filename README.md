@@ -1,5 +1,9 @@
 # Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel
 
+![summary](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/5037f05e-9ee1-4c0e-aeab-dcf0cb244c8f)
+![overview](https://github.com/pravalenka/Bank_loan_Data_Analysis-Using-SQL-Power-Bi-Excel/assets/120097217/f1d5aa08-f2b1-47a0-9d3c-2a8f225287de)
+
+
 PROBLEM STATEMENT
 -------------------
 You can also download from above Problem Statement Document File
